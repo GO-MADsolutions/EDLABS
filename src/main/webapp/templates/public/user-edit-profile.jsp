@@ -12,6 +12,8 @@
 </head>
 <body data-ng-app="demo">
 <div data-ng-controller="getuser">
+
+<div class="container">
 <h1>EDIT YOUR PROFILE</h1>
 
 <form:form modelAttribute="User" method="post">
@@ -78,12 +80,12 @@
 
 	</form:form>
 </div>
-	
+	</div>
 	<script>
 			var demo = angular.module("demo",[]);
 			demo.controller("getuser", function($scope,$http)
 					{
-					$scope.HELLO="WELCOME";
+					
 				        
 						$http.get("getuserdetails").then(function(response)
 								{

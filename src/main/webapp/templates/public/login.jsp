@@ -27,7 +27,7 @@
         </div>
         <div class="row">
         <div class="input-field col s6">
-          <input id="password" type="text" name="password" class="validate">
+          <input id="password" type="password" name="password" class="validate">
           <label for="password">Enter Your E-MailId</label>
         </div>
 			</div>

@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<start-class>com.example.EmployeeManagementApplication.java</start-class>
 	</properties>
 
 	<dependencies>
@@ -38,9 +39,9 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
+    
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-taglibs</artifactId>
-    <version>4.1.2.RELEASE</version>
 </dependency>
 
 		<dependency>
@@ -48,16 +49,8 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-    <groupId>javax.persistence</groupId>
-    <artifactId>persistence-api</artifactId>
-    <version>1.0.2</version>
-</dependency>
+		
+		
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

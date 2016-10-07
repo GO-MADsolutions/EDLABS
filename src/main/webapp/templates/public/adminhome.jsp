@@ -9,6 +9,7 @@
 <body>
 <h1>ADMIN PANEL</h1>
 
+<div class="container">
 <form method="post" action="admingetemployee">
 <div>
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -29,5 +30,8 @@
 <h2>
 <a href="/EmployeeManagement/admincreateuser">CREATE NEW USER</a>
 </h2>
+
+</div>
+
 </body>
 </html>
