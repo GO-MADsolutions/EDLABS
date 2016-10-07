@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.Model.Employee;
 import com.example.Model.EmployeeRepo;
 
 @Controller
+@SessionAttributes("personObj")
 public class GeneralController {
 	@Autowired
 	EmployeeRepo erepo;
@@ -26,8 +28,12 @@ public class GeneralController {
 	
 	public ModelAndView welcomePage()
 	{
-		
-		return new ModelAndView("welcome");
+		Authentication authq = SecurityContextHolder.getContext().getAuthentication();
+		String name = authq.getName();
+		ModelAndView mod = new ModelAndView();
+		mod.addObject("personObj", (erepo.findOneByEmailid(name)).getFirstname());
+		mod.setViewName("welcome");
+		return mod;
 	}
 	
 	@RequestMapping(value="/welcome", method= RequestMethod.GET)

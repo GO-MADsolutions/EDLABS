@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
     <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,9 +19,11 @@
 
 <nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">EDLABS</a>
+    
+      <a href="/EmployeeManagement" class="brand-logo">EDLABS</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+     <li> <a href="#"> ${personObj}</a></li>
         <li><a href="/EmployeeManagement/user/employee-edit">Edit My Profile</a></li>
         <sec:authorize access="hasAuthority('ADMIN')">
 
