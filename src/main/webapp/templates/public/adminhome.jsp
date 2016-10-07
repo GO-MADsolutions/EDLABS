@@ -25,5 +25,9 @@
 </div>
 
 </form>
+
+<h2>
+<a href="/EmployeeManagement/admincreateuser">CREATE NEW USER</a>
+</h2>
 </body>
 </html>
