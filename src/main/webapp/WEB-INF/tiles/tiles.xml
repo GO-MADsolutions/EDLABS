@@ -35,6 +35,9 @@
 	<definition name="adminpaneltoedituser" extends="layout.basic">
 		<put-attribute name="body" value="/templates/public/adminpaneltoedituser.jsp" />
 	</definition>
+	<definition name="admincreateuser" extends="layout.basic">
+		<put-attribute name="body" value="/templates/public/admincreateuser.jsp" />
+	</definition>
 	<!-- Pages -->	
 	
 	

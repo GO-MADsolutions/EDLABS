@@ -101,7 +101,7 @@ public class GeneralController {
 	{
 		Employee e = erepo.findOneByEmailid(emailid);
 		
-		ModelAndView mod = new ModelAndView("adminpaneltoedituser","User", new Employee(e.getEmailid(),e.getFirstname(),e.getLastname(),e.getPassword(),e.getSalary(),e.getJobrole(),e.getEmployeetype()));
+		ModelAndView mod = new ModelAndView("adminpaneltoedituser","User", new Employee(e.getEmployeeid(),e.getEmailid(),e.getFirstname(),e.getLastname(),e.getPassword(),e.getSalary(),e.getJobrole(),e.getEmployeetype()));
 		
 		
 		return mod;
@@ -120,6 +120,24 @@ public class GeneralController {
 	{
 		erepo.save(emp);
 		return "redirect:"+"/";
+	}
+	
+	@RequestMapping(value="/admincreateuser", method= RequestMethod.GET)
+	public ModelAndView createUser(@ModelAttribute Employee employee)
+	{
+		ModelAndView mod = new ModelAndView("admincreateuser","User",employee);
+		
+			return mod;
+	}
+
+	@RequestMapping(value="/admincreateuser", method= RequestMethod.POST)
+	public String saveCreatedUser(@ModelAttribute("User") Employee emp)
+	{
+		
+		System.out.println("INSIDE CONTROLLER");
+		erepo.save(emp);
+		
+			return "redirect:"+"/";
 	}
 
 }

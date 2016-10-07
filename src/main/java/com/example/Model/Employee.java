@@ -51,6 +51,19 @@ public class Employee {
 		this.jobrole = jobrole;
 		this.employeetype = employeetype;
 	}
+	public Employee (int employeeid, String emailid, String firstname, String lastname, String password,
+			 int salary, String jobrole, String employeetype) {
+		super();
+		this.employeeid = employeeid;
+		this.emailid = emailid;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.password = password;
+		
+		this.salary = salary;
+		this.jobrole = jobrole;
+		this.employeetype = employeetype;
+	}
 	public Employee()
 	{
 		

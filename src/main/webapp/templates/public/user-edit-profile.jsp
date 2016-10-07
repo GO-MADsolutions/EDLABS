@@ -69,11 +69,11 @@
 					name="employeetype" required> <label for="employeetype">Employee Type
 					</label>
 			</div>
-			<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			
+		</spring:bind>
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right"></i>
   </button>
-		</spring:bind>
-
 
 	</form:form>
 </div>

@@ -17,7 +17,7 @@
 		
 			<spring:bind path="User.employeeid">
 			<div class="input-field">
-				<input disabled id="employeeid" type="text" class="active validate" value=${User.employeeid}
+				<input id="employeeid" type="text" class="active validate" value=${User.employeeid}
 					name="employeeid" required> <label for="employeeid">
 					
 					Employee Id</label>
