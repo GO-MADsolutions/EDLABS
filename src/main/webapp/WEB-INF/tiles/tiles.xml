@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Templates -->
+	
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
+		
+		<put-attribute name="header" value="/WEB-INF/tiles/layout/view/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layout/view//footer.jsp" />
+	</definition>
+	
+	<definition name="layout.authentication" template="/WEB-INF/tiles/layout/authentication.jsp">
+		
+		<put-attribute name="authenticationheader" value="/WEB-INF/tiles/layout/view/authenticationheader.jsp" />
+		<put-attribute name="authenticationbody" value="" />
+		
+	</definition>
+	
+	<definition name="welcome" extends="layout.basic">
+		<put-attribute name="body" value="/templates/public/welcome.jsp" />
+	</definition>
+	
+	<definition name="user-edit-profile" extends="layout.basic">
+		<put-attribute name="body" value="/templates/public/user-edit-profile.jsp" />
+	</definition>
+	
+	<definition name="adminhome" extends="layout.basic">
+		<put-attribute name="body" value="/templates/public/adminhome.jsp" />
+	</definition>
+	
+	<definition name="adminpaneltoedituser" extends="layout.basic">
+		<put-attribute name="body" value="/templates/public/adminpaneltoedituser.jsp" />
+	</definition>
+	<!-- Pages -->	
+	
+	
+	<definition name="login" extends="layout.authentication">
+		<put-attribute name="authenticationbody" value="/templates/public/login.jsp" />
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
