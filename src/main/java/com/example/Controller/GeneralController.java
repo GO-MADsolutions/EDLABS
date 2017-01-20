@@ -140,7 +140,7 @@ public class GeneralController {
 	public String saveCreatedUser(@ModelAttribute("User") Employee emp)
 	{
 		
-		System.out.println("INSIDE CONTROLLER");
+		
 		erepo.save(emp);
 		
 			return "redirect:"+"/";

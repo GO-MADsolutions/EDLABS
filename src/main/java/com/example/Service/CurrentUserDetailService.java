@@ -20,13 +20,14 @@ public class CurrentUserDetailService implements UserDetailsService {
 		
 		this.emprepo = emprepo;
 	}
+	
 	@Override
 	public UserDetails loadUserByUsername(String Emailid) throws UsernameNotFoundException {
 		Employee e = emprepo.findOneByEmailid(Emailid);
 		
 		List<GrantedAuthority> grantedauthorities = new ArrayList<>();
 		grantedauthorities.add(new SimpleGrantedAuthority(e.getEmployeetype()));
-		System.out.println(e.getEmployeetype());
+		
 		return new User(e.getEmailid(),e.getPassword(),grantedauthorities);
 		
 	}

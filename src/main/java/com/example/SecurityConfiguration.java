@@ -31,10 +31,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().
 		
 		
-		antMatchers("/admingetemployee").hasAuthority("ADMIN").
-		antMatchers("/adminpaneltoedituser").hasAnyAuthority("ADMIN")
+		antMatchers("/admin*").hasAuthority("ADMIN").
+	//	antMatchers("/adminpaneltoedituser").hasAnyAuthority("ADMIN")
 	
-		.anyRequest().fullyAuthenticated().
+		anyRequest().fullyAuthenticated().
 		
 		and().
 		formLogin().loginPage("/login").usernameParameter("emailid").permitAll().
